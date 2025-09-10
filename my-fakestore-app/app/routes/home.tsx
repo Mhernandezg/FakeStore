@@ -8,7 +8,7 @@ import { useProducts } from "../hooks/useProducts";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Catálogo" },
-    { name: "description", content: "Lista de productos" },
+    { name: "description", content: "Lista de productos disponibles" },
   ];
 }
 
