@@ -1,0 +1,12 @@
+Documentacion:
+https://reactrouter.com/start/framework/routing
+
+API:
+https://www.postman.com/postman/flows-snippets/request/mbhh1na/all-products?tab=overview
+https://github.com/keikaavousi/fake-store-api/blob/master/README.md
+
+Errores:
+
+https://github.com/remix-run/react-router/issues/12753
+
+
