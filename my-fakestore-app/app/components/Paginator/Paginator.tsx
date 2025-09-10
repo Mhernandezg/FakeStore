@@ -14,7 +14,7 @@ export default function Paginator({
   return (
     <div className="flex justify-center mt-8 space-x-2">
       <button
-        className="px-3 py-1 border rounded disabled:opacity-50"
+        className="px-3 py-1 border rounded disabled:opacity-30 hover:bg-sky-700 hover:text-white"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
@@ -26,9 +26,9 @@ export default function Paginator({
           key={index}
           className={`px-3 py-1 border rounded ${
             currentPage === index + 1
-              ? "bg-gray-800 text-white"
+              ? "bg-sky-800 text-white"
               : "bg-white"
-          }`}
+          } hover:bg-sky-700 hover:text-white`}
           onClick={() => onPageChange(index + 1)}
         >
           {index + 1}
@@ -36,7 +36,7 @@ export default function Paginator({
       ))}
 
       <button
-        className="px-3 py-1 border rounded disabled:opacity-50"
+        className="px-3 py-1 border rounded disabled:opacity-30 hover:bg-sky-700 hover:text-white"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
