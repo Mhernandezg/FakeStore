@@ -1,4 +1,4 @@
-export default function FallBackCard() {
+export default function FallBackCards() {
   return (
     <div className="rounded-lg border p-4 shadow-md animate-pulse flex flex-col">
       <div className="h-48 w-full bg-gray-200 rounded mb-4">

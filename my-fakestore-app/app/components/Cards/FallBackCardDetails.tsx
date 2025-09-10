@@ -1,4 +1,4 @@
-export default function FallBackCardDetail() {
+export default function FallBackCardDetails() {
   return (
     <div
       role="status"
