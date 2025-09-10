@@ -1,6 +1,6 @@
 import type { Route } from "./+types/home";
-import ProductCard from "../components/Cards/ProductCard";
 import { useEffect, useState } from "react";
+import ProductCard from "../components/Cards/ProductCard";
 import FallBackCard from "../components/Cards/FallBackCard";
 import SearchBar from "../components/SearchBar/SearchBar";
 import { useProducts } from "../hooks/useProducts";
