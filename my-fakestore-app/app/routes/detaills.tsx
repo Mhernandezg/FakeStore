@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import { fetchProductById } from "../services/products";
 import { type Product } from "../types/product";
-import { useProductContext } from "~/context/productContext";
+import { useProductContext } from "../context/productContext";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import FallBackCardDetail from "../components/Cards/FallBackCardDetail";
@@ -9,8 +9,8 @@ import CardDetails from "../components/Cards/CardDetails";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Detalles de producto" },
+    { name: "description", content: "Detalles del producto seleccionado" },
   ];
 }
 
