@@ -11,8 +11,8 @@ https://www.postman.com/postman/flows-snippets/request/mbhh1na/all-products?tab=
 https://github.com/keikaavousi/fake-store-api/blob/master/README.md
 
 Video apoyo:
-
 https://www.youtube.com/watch?v=JMn_yIVl8eo&ab_channel=PedroTech
+https://www.youtube.com/watch?v=05ZM4ymK9Nc&ab_channel=DaveGray
 
 Errores:
 
