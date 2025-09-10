@@ -1,8 +1,9 @@
 import { NavLink } from "react-router";
+import { FiShoppingCart } from "react-icons/fi";
 
 export default function NavBar() {
   return (
-    <div className="bg-white">
+    <div className="bg-white top-0 sticky z-50">
       <header className="relative bg-white">
         <nav
           aria-label="Top"
@@ -16,26 +17,11 @@ export default function NavBar() {
             </div>
             <div className="ml-auto flex items-center">
               <div className="ml-4 flow-root lg:ml-6">
-                <NavLink to="/shopping-cart" className="flex items-center">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    data-slot="icon"
-                    aria-hidden="true"
-                    className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500"
-                  >
-                    <path
-                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                  <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                <NavLink to="/shopping-cart" className="relative flex items-center">
+                  <FiShoppingCart className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" />
+                  <span className="absolute -top-3 -right-4 bg-blue-600 text-white w-5 h-5 rounded-full flex items-center justify-center">
                     0
                   </span>
-                  <span className="sr-only">items in cart, view bag</span>
                 </NavLink>
               </div>
             </div>

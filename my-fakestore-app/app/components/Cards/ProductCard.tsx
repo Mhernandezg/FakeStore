@@ -23,6 +23,9 @@ export default function ProductCard({ product }: ProductCardProps) {
             <p className="text-sm font-medium text-gray-900">
               ${product.price}
             </p>
+            <button type="button" className="flex w-full gap-x-3 justify-center rounded-lg items-center bg-sky-500 text-white mt-2 px-4 py-2 hover:bg-sky-600 cursor-pointer">
+              + Add
+            </button>
           </div>
         </div>
       </NavLink>
