@@ -1,14 +1,16 @@
-import { useProductContext } from "../context/ProductContext";
+import { useProductContext } from "~/context/ProductContext";
 
 export function useProducts() {
-  const { state, loadProducts } = useProductContext();
+  const { state, loadProducts, loadCategories } = useProductContext();
 
-  const { products, loading, error } = state;
+  const { products, categories, loading, error } = state;
 
   return {
     products,
+    categories,
     loading,
     error,
     loadProducts,
+    loadCategories,
   };
 }

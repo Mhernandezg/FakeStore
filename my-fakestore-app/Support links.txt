@@ -7,6 +7,8 @@ https://tailwindcss.com/plus/ui-blocks/ecommerce/page-examples/storefront-pages
 https://thiraphat-ps-dev.medium.com/types-of-organization-folder-structures-in-react-typescript-projects-942556f0633b
 https://flowbite.com/docs/components/skeleton/
 https://caniuse.com/?search=-webkit-line-clamp
+https://github.com/tailwindlabs/heroicons
+https://tailwindcss.com/plus/ui-blocks/ecommerce/components/product-overviews
 
 API:
 https://www.postman.com/postman/flows-snippets/request/mbhh1na/all-products?tab=overview
