@@ -4,6 +4,7 @@ import ProductCard from "../components/Cards/ProductCard";
 import FallBackCards from "../components/Cards/FallBackCards";
 import SearchBar from "../components/SearchBar/SearchBar";
 import { useProducts } from "../hooks/useProducts";
+import Paginator from "../components/Paginator/paginator";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -15,8 +16,12 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const { products, categories, loading, error, loadProducts, loadCategories } =
     useProducts();
+
   const [searchQuery, setSearchQuery] = useState("");
   const [filterCategory, setFilterCategory] = useState("all");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 4;
 
   useEffect(() => {
     loadProducts();
@@ -36,6 +41,17 @@ export default function Home() {
     return matchesSearch && matchesCategory;
   });
 
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const currentProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + productsPerPage
+  );
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, filterCategory]);
+
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -52,14 +68,20 @@ export default function Home() {
             Array.from({ length: 4 }).map((_, i) => (
               <FallBackCards key={i} />
             ))
-          ) : filteredProducts.length > 0 ? (
-            filteredProducts.map((product) => (
+          ) : currentProducts.length > 0 ? (
+            currentProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))
           ) : (
             <p>No se encontraron productos</p>
           )}
         </div>
+
+        <Paginator
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={(page) => setCurrentPage(page)}
+        />
       </div>
     </div>
   );
