@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import { fetchProductById } from "../services/products";
 import { type Product } from "../types/product";
-import { useProductContext } from "~/context/ProductContext";
+import { useProductContext } from "~/context/productContext";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import FallBackCardDetail from "../components/Cards/FallBackCardDetail";
