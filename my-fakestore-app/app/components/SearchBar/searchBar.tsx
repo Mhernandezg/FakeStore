@@ -24,6 +24,7 @@ export default function SearchBar({ onSearch, categories }: SearchBarProps) {
   return (
     <div className="mb-4">
       <input
+        id="search"
         type="text"
         placeholder="Buscar productos..."
         onChange={handleSearchChange}
@@ -32,6 +33,7 @@ export default function SearchBar({ onSearch, categories }: SearchBarProps) {
       />
 
       <select
+        id="category"
         value={category}
         onChange={handleCategoryChange}
         className="p-2 border border-gray-300 rounded"
