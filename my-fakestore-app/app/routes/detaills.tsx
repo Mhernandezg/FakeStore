@@ -4,7 +4,7 @@ import { type Product } from "../types/product";
 import { useProductContext } from "../context/productContext";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import FallBackCardDetail from "../components/Cards/FallBackCardDetail";
+import FallBackCardDetail from "../components/Cards/FallBackCardDetails";
 import CardDetails from "../components/Cards/CardDetails";
 
 export function meta({}: Route.MetaArgs) {
