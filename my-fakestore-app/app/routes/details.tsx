@@ -4,7 +4,7 @@ import { type Product } from "../types/product";
 import { useProductContext } from "../context/productContext";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import FallBackCardDetail from "../components/Cards/FallBackCardDetails";
+import FallBackCardDetails from "../components/Cards/FallBackCardDetails";
 import CardDetails from "../components/Cards/CardDetails";
 
 export function meta({}: Route.MetaArgs) {
@@ -41,7 +41,7 @@ export default function details() {
       });
   }, [id, productId, state.products]);
 
-  if (loading) return <FallBackCardDetail />;
+  if (loading) return <FallBackCardDetails />;
   if (error) return <p className="text-red-500">Error: {error}</p>;
   if (!product) return <p>No se encontró el producto</p>;
 
