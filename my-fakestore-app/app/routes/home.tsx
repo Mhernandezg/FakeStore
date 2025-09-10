@@ -15,7 +15,6 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const { products, categories, loading, error, loadProducts, loadCategories } =
     useProducts();
-
   const [searchQuery, setSearchQuery] = useState("");
   const [filterCategory, setFilterCategory] = useState("all");
 
@@ -42,9 +41,9 @@ export default function Home() {
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <SearchBar
           categories={categories}
-          onSearch={(query, category) => {
-            setSearchQuery(query);
-            setFilterCategory(category);
+          onSearch={(valueSearch, valueCategory) => {
+            setSearchQuery(valueSearch);
+            setFilterCategory(valueCategory);
           }}
         />
 

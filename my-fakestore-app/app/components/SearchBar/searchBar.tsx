@@ -10,15 +10,15 @@ export default function SearchBar({ onSearch, categories }: SearchBarProps) {
   const [category, setCategory] = useState<string>("all");
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSearch(value);
-    onSearch(value, category);
+    const valueSearch = e.target.value;
+    setSearch(valueSearch);
+    onSearch(valueSearch, category);
   };
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value;
-    setCategory(value);
-    onSearch(search, value);
+    const valueCategory = e.target.value;
+    setCategory(valueCategory);
+    onSearch(search, valueCategory);
   };
 
   return (
