@@ -4,7 +4,7 @@ import ProductCard from "../components/Cards/ProductCard";
 import FallBackCards from "../components/Cards/FallBackCards";
 import SearchBar from "../components/SearchBar/SearchBar";
 import { useProducts } from "../hooks/useProducts";
-import Paginator from "../components/Paginator/paginator";
+import Paginator from "../components/Paginator/Paginator";
 
 export function meta({}: Route.MetaArgs) {
   return [
