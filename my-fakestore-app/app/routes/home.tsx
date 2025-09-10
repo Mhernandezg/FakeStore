@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
-import ProductCard from "../components/Cards/Card";
+import ProductCard from "../components/Cards/ProductCard";
 import { useEffect, useState } from "react";
-import ProductCardSkeleton from "../components/Cards/FallBackCard";
+import FallBackCard from "../components/Cards/FallBackCard";
 import SearchBar from "../components/SearchBar/SearchBar";
 import { useProducts } from "../hooks/useProducts";
 
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {loading ? (
             Array.from({ length: 4 }).map((_, i) => (
-              <ProductCardSkeleton key={i} />
+              <FallBackCard key={i} />
             ))
           ) : filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
