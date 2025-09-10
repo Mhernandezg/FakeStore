@@ -5,6 +5,7 @@ https://react.dev/reference/react/useReducer
 https://react.dev/reference/react/useContext
 https://tailwindcss.com/plus/ui-blocks/ecommerce/page-examples/storefront-pages
 https://thiraphat-ps-dev.medium.com/types-of-organization-folder-structures-in-react-typescript-projects-942556f0633b
+https://flowbite.com/docs/components/skeleton/
 
 API:
 https://www.postman.com/postman/flows-snippets/request/mbhh1na/all-products?tab=overview
@@ -15,7 +16,7 @@ https://www.youtube.com/watch?v=JMn_yIVl8eo&ab_channel=PedroTech
 https://www.youtube.com/watch?v=05ZM4ymK9Nc&ab_channel=DaveGray
 
 Errores:
-
+https://github.com/remix-run/react-router/issues/13516
 https://github.com/remix-run/react-router/issues/12753
 
 
